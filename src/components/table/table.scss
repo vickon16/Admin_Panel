@@ -1,0 +1,38 @@
+@import "../../globalVariables.scss";
+.table {
+
+  th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .cellWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .image {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+
+  .status {
+    padding: 5px;
+    border-radius: 5px;
+
+    &.Approved {
+      color: green;
+      background-color: rgba(0, 128, 0, 0.151);
+    }
+    &.Pending {
+      color: goldenrod;
+      background-color: rgba(189, 189, 3, 0.101);
+    }
+    &.Failed {
+      color: crimson;
+      background-color: rgba(220, 20, 60, 0.157);
+    } 
+  }
+}

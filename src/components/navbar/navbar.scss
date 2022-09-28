@@ -1,0 +1,107 @@
+@import "../../globalVariables.scss";
+
+.navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #555;
+  width: 100%;
+  background-color: $white;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+  .wrapper {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: 0.5px solid lightgray;
+      padding: 3px 8px;
+      width: min(100%, 250px);
+
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 100%;
+
+        &::placeholder {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+
+    .item {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      svg {
+        font-size: 1.45rem;
+      }
+
+      .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+
+      .counter {
+        width: 15px;
+        height: 15px;
+        background-color: red;
+        border-radius: 50%;
+        color: $white;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 10px;
+        font-weight: bold;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+      }
+
+      &.hamburger {
+        display: none;
+        
+        svg {
+          width: 45px;
+          height: 45px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        &:not(.mobile) {
+          display: none;
+        }
+
+        &.hamburger {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 3;
+  }
+}

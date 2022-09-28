@@ -1,0 +1,89 @@
+@import "../globalVariables.scss";
+
+.app.dark {
+  background-color: $d-MainBg;
+  color: $d-White;
+
+  .featured .title {
+      color: $d-White;
+  }
+
+  .chartGrid {
+    stroke : rgba(228, 228, 228, 0.2);
+  }
+
+  .table {
+    background-color: $d-Bg;
+
+    .tableCell {
+      color: $d-White;
+    }
+  }
+
+  .navbar {
+    color: $d-White;
+    background-color: $d-MainBg;
+
+    .search {
+      border-color: $d-Gray;
+    }
+  }
+
+  .sidebar {
+    background-color: $d-Bg;
+    border-color: $d-Border;
+
+    .top {
+      .logo {
+        color: $d-White;
+      }
+    }
+
+    hr {
+      border-color: $d-Border;
+    }
+
+    ul a {
+      svg {
+        color: $d-White;
+      }
+
+      &:hover {
+        background-color: $d-Border;
+      }
+    }
+  }
+
+  // users and products
+  .dataTable {
+    .dataTableTitle, .datagrid {
+      color: $d-White;
+      border: none;
+
+      .viewButton, .deleteButton {
+        color: $d-White;
+        border-color: $d-White;
+      }
+    }
+  }
+
+  // single 
+  .single {
+    .top .left .details .itemTitle {
+      color: $d-White;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    color: white;
+  }
+
+  .MuiButtonBase-root {
+    color: $d-Gray;
+  }
+
+  .css-rtrcn9-MuiTablePagination-root  {
+    color: $d-White;
+  }
+}
