@@ -1,0 +1,14 @@
+@import "../../globalVariables.scss";
+
+.chart {
+  flex: 4;
+  color: gray;
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .chartGrid {
+    stroke : #d7d7d7;
+  }
+}

@@ -1,0 +1,101 @@
+@import "../../globalVariables.scss";
+
+.single {
+  .top,
+  .bottom {
+    padding: 20px;
+
+    .title {
+      margin-bottom: 0.8rem;
+      color: rgb(202, 201, 201);
+      font-size: clamp(1rem, 1.3vw, 1.3rem);
+      font-weight: bold;
+    }
+  }
+
+  .top {
+    .topWrapper {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      width: 100%;
+      flex-wrap: wrap;
+
+      > article {
+        padding: 30px 20px;
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        border-radius: 8px;
+      }
+
+      .left {
+        flex: 1;
+        position: relative;
+        min-width: 300px;
+        max-width: 400px;
+
+        .item {
+          display: flex;
+          gap: 20px;
+
+          .itemImg {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+          }
+
+          .details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+
+            .itemTitle {
+              margin-bottom: 5px;
+              color: #555;
+            }
+            .detailsItem {
+              font-size: 0.92rem;
+
+              .itemKey {
+                font-weight: bold;
+                color: gray;
+              }
+              .itemValue {
+                font-weight: 300;
+              }
+            }
+          }
+        }
+
+        .editButton {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 5px;
+          font-size: 0.9rem;
+          color: $secondaryPurple;
+          background-color: #7551f824;
+          cursor: pointer;
+          border-radius: 0px 0px 0px 5px;
+        }
+      }
+
+      .right {
+        flex: 1;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  }
+
+  .bottom {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 8px;
+    margin: 10px 20px;
+  }
+}

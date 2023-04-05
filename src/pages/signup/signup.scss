@@ -1,0 +1,79 @@
+@import "../../globalVariables.scss";
+
+.signup {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef;
+
+  .signupWrapper {
+    width: min(100%, 400px);
+    margin: 0 auto;
+    padding: 40px 20px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 8px;
+    background-color: white;
+
+
+    .title {
+      margin: .5rem 0 1.5rem;
+      font-size: clamp(1.5rem, 1.7vw, 1.7rem);
+      color: $primaryPurple;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      .inputGroup {
+        width: 100%;
+
+        label {
+          margin: .5rem 0;
+          display: block;
+          font-size: clamp(1rem, 1.2vw, 1.2rem);
+          font-weight: 500;
+        }
+
+        input:not([type=file]) {
+          width: 100%;
+          height: 40px;
+          border-radius: 4px;
+          outline: none;
+          border: 1px solid $primaryGray;
+          font-size: 1rem;
+          padding: 0 10px;
+          box-sizing: border-box;
+        }
+      }
+
+      button {
+        width: 200px;
+        height: 40px;
+        border: none;
+        margin: 0.5rem 0;
+        background-color: $primaryPurple;
+        color: white;
+        border-radius: 4px;
+        font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+
+        &:disabled {
+          cursor: not-allowed;
+          opacity: .5
+        }
+      }
+
+      .bottomText a {
+        color: $primaryPurple;
+        text-decoration: underline;
+      }
+    }
+  }
+}

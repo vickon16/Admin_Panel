@@ -1,0 +1,70 @@
+
+.dataTable {
+  height: 630px;
+  padding: 20px;
+
+  .dataTableTitle {
+    width: 100%;
+    font-size: 1.5rem;
+    color: gray;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .link {
+      color: green;
+      font-size: 1rem;
+      font-weight: 400;
+      border: 1px solid green;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+
+  .cellWithImg, .cellAction {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .cellImg {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    .viewButton, .deleteButton {
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: darkblue;
+      cursor: pointer;
+      border: 1px dotted rgba(0, 0, 139, 0.596);
+
+      &:hover {
+        border-width: 2px;
+      }
+    }
+    .deleteButton {
+      color: crimson;
+      border: 1px dotted rgba(220, 20, 60, 0.6);
+    }
+  }
+
+  .status {
+    padding: 5px;
+    border-radius: 5px;
+
+    &.Approved {
+      color: rgb(7, 209, 7);
+      background-color: rgba(0, 128, 0, 0.151);
+    }
+    &.Pending {
+      color: goldenrod;
+      background-color: rgba(189, 189, 3, 0.101);
+    }
+    &.Failed {
+      color: crimson;
+      background-color: rgba(220, 20, 60, 0.157);
+    } 
+  }
+}
